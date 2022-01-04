@@ -1,6 +1,8 @@
-﻿using System;
+﻿using AdvWorksDTO;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -34,47 +36,58 @@ namespace AdvWorksDAL
                 return -99;
             }
         }
-        public void FetchAllDept()
+        public List<DeptDetailsDTO> FetchAllDept()
         {
             try
             {
                 cmdObj = new SqlCommand(@"SELECT Name,GroupName FROM HumanResources.Department",conObj);
                 conObj.Open();
                 SqlDataReader drDept = cmdObj.ExecuteReader();
+                //while (drDept.Read())
+                //{
+                //    Console.WriteLine(drDept["Name"]+" | "+drDept["GroupName"]);
+                //}
+                List<DeptDetailsDTO> lstDept = new List<DeptDetailsDTO>();
                 while (drDept.Read())
                 {
-                    Console.WriteLine(drDept["Name"]+" | "+drDept["GroupName"]);
+                    DeptDetailsDTO deptFromReader = new DeptDetailsDTO();
+                    deptFromReader.DeptName = drDept["Name"].ToString();
+                    deptFromReader.DeptGroupName = drDept["GroupName"].ToString();
+                    lstDept.Add(deptFromReader);
+                    //lstDept.Add(new DeptDetailsDTO()
+                    //{
+                    //    DeptName = drDept["Name"].ToString(),
+                    //    DeptGroupName = drDept["GroupName"].ToString()
+                    //});
                 }
+                return lstDept;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-
+                throw;
             }
             finally
             {
                 conObj.Close();
             }
         }
-        public void ProductList()
+        public List<ProductsDTO> ProductList()
         {
-            try
+            cmdObj = new SqlCommand(@"SELECT ProductID,Name,ProductNumber,ListPrice FROM Production.Product", conObj);
+            SqlDataAdapter daProducts = new SqlDataAdapter(cmdObj);
+            DataTable dtProductsFromDB = new DataTable();
+            daProducts.Fill(dtProductsFromDB);
+            List<ProductsDTO> lstProducts = new List<ProductsDTO>();
+            foreach (DataRow prod in dtProductsFromDB.Rows)
             {
-                cmdObj = new SqlCommand(@"SELECT ProductID,Name,ProductNumber,ListPrice FROM Production.Product where ListPrice > 10.0 ORDER BY ListPrice", conObj);
-                conObj.Open();
-                SqlDataReader drProduct = cmdObj.ExecuteReader();
-                while (drProduct.Read())
-                {
-                    Console.WriteLine(drProduct["ProductID"] + " | " + drProduct["Name"] + " | " + drProduct["ProductNumber"] + " | " + drProduct["ListPrice"]);
-                }
+                ProductsDTO newObj = new ProductsDTO();
+                newObj.ProdId = Convert.ToInt32(prod["ProductId"]);
+                newObj.ProdName = Convert.ToString(prod["Name"]);
+                newObj.ProdNum = Convert.ToString(prod["ProductNumber"]);
+                newObj.ProdListPrice = Convert.ToInt32(prod["ListPrice"]);
+                lstProducts.Add(newObj);
             }
-            catch (Exception ex)
-            {
-
-            }
-            finally
-            {
-                conObj.Close();
-            }
+            return lstProducts;
         }
     }
 }

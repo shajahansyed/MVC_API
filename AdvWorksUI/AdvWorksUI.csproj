@@ -54,6 +54,10 @@
       <Project>{37B5A5F7-DF27-4A7F-8425-E58E73EA789F}</Project>
       <Name>AdvWorksBL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AdvWorksDTO\AdvWorksDTO.csproj">
+      <Project>{AE60F0DB-7822-4283-B1D4-7ADBFFE2DA48}</Project>
+      <Name>AdvWorksDTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

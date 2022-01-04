@@ -11,3 +11,5 @@ C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksUI\obj\Debug\AdvWork
 C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksUI\obj\Debug\AdvWorksUI.csproj.CopyComplete
 C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksUI\obj\Debug\AdvWorksUI.exe
 C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksUI\obj\Debug\AdvWorksUI.pdb
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksUI\bin\Debug\AdvWorksDTO.dll
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksUI\bin\Debug\AdvWorksDTO.pdb

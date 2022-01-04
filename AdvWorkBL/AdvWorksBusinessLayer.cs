@@ -1,4 +1,5 @@
 ﻿using AdvWorksDAL;
+using AdvWorksDTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,15 +22,18 @@ namespace AdvWorksBL
                 return -89;
             }
         }
-        public void GetAllDepts()
+        public List<DeptDetailsDTO> GetAllDepts()
         {
             AdvWorksDataAccessLayer dalObj = new AdvWorksDataAccessLayer();
-            dalObj.FetchAllDept();
+            List<DeptDetailsDTO> deptLstFromDAL = dalObj.FetchAllDept();
+            //dalObj.FetchAllDept();
+            return deptLstFromDAL;
         }
-        public void GetAllProducts()
+        public List<ProductsDTO> GetAllProducts()
         {
             AdvWorksDataAccessLayer dalObj = new AdvWorksDataAccessLayer();
-            dalObj.ProductList();
+            List<ProductsDTO> prodLstFromDal = dalObj.ProductList();
+            return prodLstFromDal;
         }
     }
 }

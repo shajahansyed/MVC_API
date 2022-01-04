@@ -45,5 +45,11 @@
     <Compile Include="AdvWorksDataAccessLayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AdvWorksDTO\AdvWorksDTO.csproj">
+      <Project>{AE60F0DB-7822-4283-B1D4-7ADBFFE2DA48}</Project>
+      <Name>AdvWorksDTO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

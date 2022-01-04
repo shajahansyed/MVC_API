@@ -1,0 +1,6 @@
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksDTO\bin\Debug\AdvWorksDTO.dll
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksDTO\bin\Debug\AdvWorksDTO.pdb
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksDTO\obj\Debug\AdvWorksDTO.csproj.AssemblyReference.cache
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksDTO\obj\Debug\AdvWorksDTO.csproj.CoreCompileInputs.cache
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksDTO\obj\Debug\AdvWorksDTO.dll
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksDTO\obj\Debug\AdvWorksDTO.pdb

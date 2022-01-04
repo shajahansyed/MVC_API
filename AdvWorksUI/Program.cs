@@ -1,4 +1,5 @@
 ﻿using AdvWorksBL;
+using AdvWorksDTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,8 +20,20 @@ namespace AdvWorksUI
                 if (result == 1)
                 {
                     Console.WriteLine("Database Connection Established.");
+                    Console.Write("Enter product name: ");
+                    string input = Console.ReadLine();
                     //blObj.GetAllDepts();
-                    blObj.GetAllProducts();
+                    //blObj.GetAllProducts();
+                    //List<DeptDetailsDTO> deptLstFromBL = blObj.GetAllDepts();
+                    //foreach (var dept in deptLstFromBL)
+                    //{
+                    //    Console.WriteLine(dept.DeptName+ " | "+dept.DeptGroupName);
+                    //}
+                    List<ProductsDTO> prodLstFromBL = blObj.GetAllProducts();
+                    foreach (var prod in prodLstFromBL)
+                    {
+                        Console.WriteLine(prod.ProdId + " | " + prod.ProdName + " | " + prod.ProdNum + " | " + prod.ProdListPrice);
+                    }
                 }
                 else
                     Console.WriteLine("Database Connection Failed.");

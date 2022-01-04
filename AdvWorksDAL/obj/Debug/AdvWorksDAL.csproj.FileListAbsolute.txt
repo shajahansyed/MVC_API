@@ -4,3 +4,6 @@ C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksDAL\obj\Debug\AdvWor
 C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksDAL\obj\Debug\AdvWorksDAL.csproj.CoreCompileInputs.cache
 C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksDAL\obj\Debug\AdvWorksDAL.dll
 C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksDAL\obj\Debug\AdvWorksDAL.pdb
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksDAL\bin\Debug\AdvWorksDTO.dll
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksDAL\bin\Debug\AdvWorksDTO.pdb
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksDAL\obj\Debug\AdvWorksDAL.csproj.CopyComplete

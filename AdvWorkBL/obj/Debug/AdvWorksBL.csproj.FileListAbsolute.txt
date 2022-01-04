@@ -7,3 +7,5 @@ C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorkBL\obj\Debug\AdvWorks
 C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorkBL\obj\Debug\AdvWorksBL.csproj.CopyComplete
 C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorkBL\obj\Debug\AdvWorkBL.dll
 C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorkBL\obj\Debug\AdvWorkBL.pdb
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorkBL\bin\Debug\AdvWorksDTO.dll
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorkBL\bin\Debug\AdvWorksDTO.pdb
