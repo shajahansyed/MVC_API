@@ -1,0 +1,13 @@
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksUI\bin\Debug\AdvWorksUI.exe.config
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksUI\bin\Debug\AdvWorksUI.exe
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksUI\bin\Debug\AdvWorksUI.pdb
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksUI\bin\Debug\AdvWorkBL.dll
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksUI\bin\Debug\AdvWorksDAL.dll
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksUI\bin\Debug\AdvWorkBL.pdb
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksUI\bin\Debug\AdvWorksDAL.pdb
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksUI\obj\Debug\AdvWorksUI.csproj.AssemblyReference.cache
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksUI\obj\Debug\AdvWorksUI.csproj.SuggestedBindingRedirects.cache
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksUI\obj\Debug\AdvWorksUI.csproj.CoreCompileInputs.cache
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksUI\obj\Debug\AdvWorksUI.csproj.CopyComplete
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksUI\obj\Debug\AdvWorksUI.exe
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksUI\obj\Debug\AdvWorksUI.pdb

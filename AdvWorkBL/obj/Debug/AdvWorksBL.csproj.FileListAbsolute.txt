@@ -1,0 +1,9 @@
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorkBL\bin\Debug\AdvWorkBL.dll
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorkBL\bin\Debug\AdvWorkBL.pdb
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorkBL\bin\Debug\AdvWorksDAL.dll
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorkBL\bin\Debug\AdvWorksDAL.pdb
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorkBL\obj\Debug\AdvWorksBL.csproj.AssemblyReference.cache
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorkBL\obj\Debug\AdvWorksBL.csproj.CoreCompileInputs.cache
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorkBL\obj\Debug\AdvWorksBL.csproj.CopyComplete
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorkBL\obj\Debug\AdvWorkBL.dll
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorkBL\obj\Debug\AdvWorkBL.pdb

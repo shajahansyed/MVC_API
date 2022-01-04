@@ -1,0 +1,6 @@
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksDAL\bin\Debug\AdvWorksDAL.dll
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksDAL\bin\Debug\AdvWorksDAL.pdb
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksDAL\obj\Debug\AdvWorksDAL.csproj.AssemblyReference.cache
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksDAL\obj\Debug\AdvWorksDAL.csproj.CoreCompileInputs.cache
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksDAL\obj\Debug\AdvWorksDAL.dll
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksDAL\obj\Debug\AdvWorksDAL.pdb
