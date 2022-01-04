@@ -89,5 +89,31 @@ namespace AdvWorksDAL
             }
             return lstProducts;
         }
+        public List<ProductsDTO> ProdSearchList(string input)
+        {
+            try
+            {
+                cmdObj = new SqlCommand($@"SELECT ProductID,Name,ProductNumber,ListPrice FROM Production.Product WHERE Name LIKE '%{input}%' ORDER BY Name", conObj);
+                SqlDataAdapter daProducts = new SqlDataAdapter(cmdObj);
+                DataTable dtProductsFromDB = new DataTable();
+                daProducts.Fill(dtProductsFromDB);
+                List<ProductsDTO> lstProducts = new List<ProductsDTO>();
+                foreach (DataRow prod in dtProductsFromDB.Rows)
+                {
+                    ProductsDTO newObj = new ProductsDTO();
+                    newObj.ProdId = Convert.ToInt32(prod["ProductId"]);
+                    newObj.ProdName = Convert.ToString(prod["Name"]);
+                    newObj.ProdNum = Convert.ToString(prod["ProductNumber"]);
+                    newObj.ProdListPrice = Convert.ToInt32(prod["ListPrice"]);
+                    lstProducts.Add(newObj);
+                }
+                return lstProducts;
+            }
+            catch (Exception ex)
+            {
+                Exception exp = new Exception("Invalid user input");
+                throw exp;
+            }
+        }
     }
 }

@@ -10,6 +10,11 @@ namespace AdvWorksBL
 {
     public class AdvWorksBusinessLayer
     {
+        AdvWorksDataAccessLayer dalObj;
+        public AdvWorksBusinessLayer()
+        {
+            dalObj = new AdvWorksDataAccessLayer();
+        }
         public int ConnectToDB()
         {
             try
@@ -32,8 +37,13 @@ namespace AdvWorksBL
         public List<ProductsDTO> GetAllProducts()
         {
             AdvWorksDataAccessLayer dalObj = new AdvWorksDataAccessLayer();
-            List<ProductsDTO> prodLstFromDal = dalObj.ProductList();
-            return prodLstFromDal;
+            List<ProductsDTO> prodLstFromDAL = dalObj.ProductList();
+            return prodLstFromDAL;
+        }
+        public List<ProductsDTO> SearchedProd(string input)
+        {
+            List<ProductsDTO> searchedProdLstFromDAL = dalObj.ProdSearchList(input);
+            return searchedProdLstFromDAL;
         }
     }
 }
