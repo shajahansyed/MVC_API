@@ -32,19 +32,35 @@ namespace AdvWorksUI
                     //{
                     //    Console.WriteLine(prod.ProdId + " | " + prod.ProdName + " | " + prod.ProdNum + " | " + prod.ProdListPrice);
                     //}
-                    Console.Write("Enter product name: ");
-                    string input = Console.ReadLine();
-                    List<ProductsDTO> searchedProdLstFromBL = blObj.SearchedProd(input);
-                    foreach (var prod in searchedProdLstFromBL)
-                    {
-                        Console.WriteLine(prod.ProdId + " | " + prod.ProdName + " | " + prod.ProdNum + " | " + prod.ProdListPrice);
-                    }
+                    //Console.Write("Enter product name: ");
+                    //string input = Console.ReadLine();
+                    //List<ProductsDTO> searchedProdLstFromBL = blObj.SearchedProd(input);
+                    //foreach (var prod in searchedProdLstFromBL)
+                    //{
+                    //    Console.WriteLine(prod.ProdId + " | " + prod.ProdName + " | " + prod.ProdNum + " | " + prod.ProdListPrice);
+                    //}
+                    Console.Write("Enter Department Name: ");
+                    string deptName = Console.ReadLine();
+                    Console.Write("Enter Department Group Name: ");
+                    string deptGroupName = Console.ReadLine();
+                    DeptDetailsDTO newDeptObj = new DeptDetailsDTO();
+                    newDeptObj.DeptName = deptName;
+                    newDeptObj.DeptGroupName = deptGroupName;
+                    int returnValue = blObj.AddNewDept(newDeptObj);
+                    if (returnValue == 1)
+                        Console.WriteLine("Department Added Sucessfully");
+                    else if (returnValue == -1)
+                        Console.WriteLine("Department Name Cannot be NULL");
+                    else if (returnValue == -2)
+                        Console.WriteLine("Department Group Name Cannot be NULL");
+                    else
+                        Console.WriteLine("ERROR 101: Something went worng.... We will fix it");
                 }
                 else
                     Console.WriteLine("Database Connection Failed.");
                 //Console.WriteLine(blObj.ConnectToDB().ToString());
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 Console.WriteLine("Devlopers crashed, We will fix it...");
             }

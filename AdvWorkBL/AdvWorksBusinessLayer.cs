@@ -45,5 +45,10 @@ namespace AdvWorksBL
             List<ProductsDTO> searchedProdLstFromDAL = dalObj.ProdSearchList(input);
             return searchedProdLstFromDAL;
         }
+
+        public int AddNewDept(DeptDetailsDTO newDeptObj)
+        {
+            return dalObj.AddNewDepartment(newDeptObj);
+        }
     }
 }

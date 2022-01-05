@@ -1,0 +1,31 @@
+
+select * from HumanResources.Department;
+
+CREATE PROCEDURE uspAddNewDept 
+(@deptName NVARCHAR(50), @deptGroupName NVARCHAR(50), @deptDate DATETIME)
+AS 
+BEGIN --{
+	BEGIN TRY
+		IF @deptName IS NOT NULL
+		BEGIN
+			IF @deptGroupName IS NOT NULL
+			BEGIN
+				INSERT INTO HumanResources.Department(Name, GroupName, ModifiedDate) VALUES(@deptName,@deptGroupName,@deptDate)
+				RETURN 1
+			END
+			ELSE
+				RETURN -1
+		END
+		ELSE
+			RETURN -2
+	END TRY
+	BEGIN CATCH
+		RETURN -199
+    END CATCH
+END --}
+
+DECLARE @return Int
+EXEC @return=uspAddNewDept @deptName='SampleTest', @deptGroupName ='SampleGroupTest', @deptDate='12-10-1999';
+select @return
+
+delete from HumanResources.Department where DepartmentID = 17;

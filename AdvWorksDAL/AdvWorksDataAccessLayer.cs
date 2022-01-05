@@ -71,6 +71,35 @@ namespace AdvWorksDAL
                 conObj.Close();
             }
         }
+
+        public int AddNewDepartment(DeptDetailsDTO newDeptObj)
+        {
+            try
+            {
+                cmdObj = new SqlCommand();
+                cmdObj.CommandText = "uspAddNewDept";
+                cmdObj.CommandType = System.Data.CommandType.StoredProcedure;
+                cmdObj.Connection = conObj;
+                cmdObj.Parameters.AddWithValue("@deptName", newDeptObj.DeptName);
+                cmdObj.Parameters.AddWithValue("@deptGroupName", newDeptObj.DeptGroupName);
+                cmdObj.Parameters.AddWithValue("@deptDate", System.DateTime.Now);
+
+                SqlParameter prcReturnValue = new SqlParameter();
+                prcReturnValue.Direction = ParameterDirection.ReturnValue;
+                prcReturnValue.SqlDbType = SqlDbType.Int;
+                cmdObj.Parameters.Add(prcReturnValue);
+
+                conObj.Open();
+                cmdObj.ExecuteNonQuery();
+                return Convert.ToInt32(prcReturnValue);
+            }
+            catch (Exception)
+            {
+                return -99;
+            }
+            finally { conObj.Close(); }
+        }
+
         public List<ProductsDTO> ProductList()
         {
             cmdObj = new SqlCommand(@"SELECT ProductID,Name,ProductNumber,ListPrice FROM Production.Product", conObj);
