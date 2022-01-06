@@ -46,9 +46,20 @@ namespace AdvWorksBL
             return searchedProdLstFromDAL;
         }
 
-        public int AddNewDept(DeptDetailsDTO newDeptObj)
+        public int AddNewDept(DeptDetailsDTO newDeptObj, out int newDeptId)
         {
-            return dalObj.AddNewDepartment(newDeptObj);
+            if (String.IsNullOrEmpty(newDeptObj.DeptName))
+            {
+                newDeptId = 0;
+                return -1;
+            }
+            if (String.IsNullOrEmpty(newDeptObj.DeptGroupName))
+            {
+                newDeptId = 0;
+                return -2;
+            }
+            else
+                return dalObj.AddNewDepartment(newDeptObj, out newDeptId);
         }
     }
 }

@@ -1,16 +1,18 @@
 
-select * from HumanResources.Department;
 
-CREATE PROCEDURE uspAddNewDept 
-(@deptName NVARCHAR(50), @deptGroupName NVARCHAR(50), @deptDate DATETIME)
+SELECT * FROM HumanResources.Department;
+
+ALTER PROCEDURE uspAddNewDept 
+(@deptName NVARCHAR(50), @deptGroupName NVARCHAR(50), @deptDate DATETIME, @deptID INT OUT)
 AS 
-BEGIN --{
+BEGIN
 	BEGIN TRY
 		IF @deptName IS NOT NULL
 		BEGIN
 			IF @deptGroupName IS NOT NULL
 			BEGIN
 				INSERT INTO HumanResources.Department(Name, GroupName, ModifiedDate) VALUES(@deptName,@deptGroupName,@deptDate)
+				SELECT @deptID = MAX(DepartmentID) FROM HumanResources.Department
 				RETURN 1
 			END
 			ELSE
@@ -22,10 +24,9 @@ BEGIN --{
 	BEGIN CATCH
 		RETURN -199
     END CATCH
-END --}
+END
 
-DECLARE @return Int
-EXEC @return=uspAddNewDept @deptName='SampleTest', @deptGroupName ='SampleGroupTest', @deptDate='12-10-1999';
-select @return
 
-delete from HumanResources.Department where DepartmentID = 17;
+DECLARE @dept int
+EXEC uspAddNewDept @deptName='Production Management', @deptGroupName ='Manufacturing', @deptDate='08-15-1999', @deptID = @dept OUTPUT
+SELECT @dept as 'Max of Depts'

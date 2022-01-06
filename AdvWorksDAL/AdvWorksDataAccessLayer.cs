@@ -72,10 +72,11 @@ namespace AdvWorksDAL
             }
         }
 
-        public int AddNewDepartment(DeptDetailsDTO newDeptObj)
+        public int AddNewDepartment(DeptDetailsDTO newDeptObj, out int newDeptId)
         {
             try
             {
+                newDeptId = 0;
                 cmdObj = new SqlCommand();
                 cmdObj.CommandText = "uspAddNewDept";
                 cmdObj.CommandType = System.Data.CommandType.StoredProcedure;
@@ -89,12 +90,20 @@ namespace AdvWorksDAL
                 prcReturnValue.SqlDbType = SqlDbType.Int;
                 cmdObj.Parameters.Add(prcReturnValue);
 
+                SqlParameter prcDeptIDOut = new SqlParameter();
+                prcDeptIDOut.Direction = ParameterDirection.Output;
+                prcDeptIDOut.SqlDbType = SqlDbType.Int;
+                prcDeptIDOut.ParameterName = "@deptID";
+                cmdObj.Parameters.Add(prcDeptIDOut);
+
                 conObj.Open();
                 cmdObj.ExecuteNonQuery();
-                return Convert.ToInt32(prcReturnValue);
+                newDeptId = Convert.ToInt32(prcDeptIDOut.Value);
+                return Convert.ToInt32(prcReturnValue.Value);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                newDeptId = 0;
                 return -99;
             }
             finally { conObj.Close(); }

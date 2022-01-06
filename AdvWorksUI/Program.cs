@@ -46,9 +46,13 @@ namespace AdvWorksUI
                     DeptDetailsDTO newDeptObj = new DeptDetailsDTO();
                     newDeptObj.DeptName = deptName;
                     newDeptObj.DeptGroupName = deptGroupName;
-                    int returnValue = blObj.AddNewDept(newDeptObj);
+                    int newDeptId = 0;
+                    int returnValue = blObj.AddNewDept(newDeptObj,out newDeptId);
                     if (returnValue == 1)
+                    {
                         Console.WriteLine("Department Added Sucessfully");
+                        Console.WriteLine("The newly added department has dept ID: "+newDeptId);
+                    }
                     else if (returnValue == -1)
                         Console.WriteLine("Department Name Cannot be NULL");
                     else if (returnValue == -2)
