@@ -61,5 +61,10 @@ namespace AdvWorksBL
             else
                 return dalObj.AddNewDepartment(newDeptObj, out newDeptId);
         }
+        public List<ProductsDTO> FetchAllProductsUsingEF()
+        {
+            List<ProductsDTO> prodLstFromDAL = dalObj.FetchProductsListUsingEF();
+            return prodLstFromDAL;
+        }
     }
 }

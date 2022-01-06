@@ -14,11 +14,12 @@ namespace AdvWorksDAL
     {
         SqlConnection conObj;
         SqlCommand cmdObj;
+        AdventureWorks2012Context contextObj;
         public AdvWorksDataAccessLayer()
         {
             conObj = new SqlConnection(ConfigurationManager.ConnectionStrings["AdvWorksConnectionStr"].ConnectionString);
+            contextObj = new AdventureWorks2012Context();
         }
-
         public int ConnectionToDB()
         {
             try
@@ -151,6 +152,46 @@ namespace AdvWorksDAL
             {
                 Exception exp = new Exception("Invalid user input");
                 throw exp;
+            }
+        }
+        public List<ProductsDTO> FetchProductsListUsingEF()
+        {
+            try
+            {
+                //contextObj.Products.ToList();
+                //var lstProdListPrice = contextObj.Products.Where(w => w.ListPrice>100).OrderBy(o => o.ListPrice).ToList();
+                var result = (from prod in contextObj.Products
+                              where prod.ListPrice>100
+                              orderby prod.ListPrice ascending
+                              select prod).ToList();
+                List<Product> lstProductsFromDB = contextObj.Products.ToList();
+                List<ProductsDTO> lstProducts = new List<ProductsDTO>();
+                foreach(var prod in result)
+                {
+                    lstProducts.Add(new ProductsDTO()
+                    {
+                        ProdId = prod.ProductID,
+                        ProdName = prod.Name,
+                        ProdNum = prod.ProductNumber,
+                        ProdListPrice = prod.ListPrice,
+                    });
+                }
+                //foreach (var prod in lstProdListPrice)
+                //{
+                //    lstProducts.Add(new ProductsDTO()
+                //    {
+                //        ProdId = prod.ProductID,
+                //        ProdName = prod.Name,
+                //        ProdNum = prod.ProductNumber,
+                //        ProdListPrice = prod.ListPrice,
+                //    });
+                //}
+            return lstProducts;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
             }
         }
     }

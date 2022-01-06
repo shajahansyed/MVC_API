@@ -13,3 +13,8 @@ C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksUI\obj\Debug\AdvWork
 C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksUI\obj\Debug\AdvWorksUI.pdb
 C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksUI\bin\Debug\AdvWorksDTO.dll
 C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksUI\bin\Debug\AdvWorksDTO.pdb
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksUI\bin\Debug\EntityFramework.dll
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksUI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksUI\bin\Debug\EntityFramework.xml
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksUI\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksUI\bin\Debug\AdvWorksDAL.dll.config

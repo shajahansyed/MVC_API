@@ -9,3 +9,6 @@ C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorkBL\obj\Debug\AdvWorkB
 C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorkBL\obj\Debug\AdvWorkBL.pdb
 C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorkBL\bin\Debug\AdvWorksDTO.dll
 C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorkBL\bin\Debug\AdvWorksDTO.pdb
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorkBL\bin\Debug\EntityFramework.dll
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorkBL\bin\Debug\AdvWorksDAL.dll.config
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorkBL\bin\Debug\EntityFramework.xml
