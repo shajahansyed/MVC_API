@@ -1,4 +1,0 @@
-{
-	"DeptName":"Sample dept name",
-	"DeptGroupName":"Sample dept group name"
-}
