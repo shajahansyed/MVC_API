@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.Data.Linq.SqlClient;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -70,6 +71,54 @@ namespace AdvWorksDAL
             finally
             {
                 conObj.Close();
+            }
+        }
+
+        public List<DeptDetailsDTO> DeptSearchList(string deptGroupName)
+        {
+            try
+            {
+
+                var lstDept = contextObj.Departments.Where(w => w.GroupName.Contains(deptGroupName)).ToList();
+                //var result = (from dept in contextObj.Departments
+                //                  //where dept.GroupName == deptGroupName
+                //              where SqlMethods.Like(dept.GroupName,"%"+deptGroupName+"%")
+                //              select dept).ToList();
+                List<Department> lstDeptsFromDB = contextObj.Departments.ToList();
+                List<DeptDetailsDTO> lstDepts = new List<DeptDetailsDTO>();
+                foreach (var dept in lstDept)
+                {
+                    lstDepts.Add(new DeptDetailsDTO()
+                    {
+                        DeptName = dept.Name,
+                        DeptGroupName = dept.GroupName,
+                    });
+                }
+                return lstDepts;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public int AddNewDeptUsingEF(DeptDetailsDTO newDeptObj)
+        {
+            try
+            {
+                Department deptObj = new Department();
+                deptObj.Name = newDeptObj.DeptName;
+                deptObj.GroupName = newDeptObj.DeptGroupName;
+                deptObj.ModifiedDate = System.DateTime.Now;
+                
+                contextObj.Departments.Add(deptObj);
+                return contextObj.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
             }
         }
 

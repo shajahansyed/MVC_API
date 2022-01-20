@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvWorksDAL", "AdvWorksDAL\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvWorksDTO", "AdvWorksDTO\AdvWorksDTO.csproj", "{AE60F0DB-7822-4283-B1D4-7ADBFFE2DA48}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvWorksAPI", "AdvWorksAPI\AdvWorksAPI.csproj", "{65BDE7F2-6BC4-4B17-955A-9FC2B9F62BE1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{AE60F0DB-7822-4283-B1D4-7ADBFFE2DA48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE60F0DB-7822-4283-B1D4-7ADBFFE2DA48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE60F0DB-7822-4283-B1D4-7ADBFFE2DA48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65BDE7F2-6BC4-4B17-955A-9FC2B9F62BE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65BDE7F2-6BC4-4B17-955A-9FC2B9F62BE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65BDE7F2-6BC4-4B17-955A-9FC2B9F62BE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65BDE7F2-6BC4-4B17-955A-9FC2B9F62BE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -40,6 +40,31 @@ namespace AdvWorksBL
             List<ProductsDTO> prodLstFromDAL = dalObj.ProductList();
             return prodLstFromDAL;
         }
+
+        public List<DeptDetailsDTO> SearchDept(string deptGroupName)
+        {
+            List<DeptDetailsDTO> searchedDeptLstFromDAL = dalObj.DeptSearchList(deptGroupName);
+            return searchedDeptLstFromDAL;
+        }
+
+        public int AddNewDeptEF(DeptDetailsDTO newDeptObj)
+        {
+            try
+            {
+                if (String.IsNullOrEmpty(newDeptObj.DeptName))
+                    return -1;
+                if (String.IsNullOrEmpty(newDeptObj.DeptGroupName))
+                    return -2;
+                else
+                    return dalObj.AddNewDeptUsingEF(newDeptObj);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
         public List<ProductsDTO> SearchedProd(string input)
         {
             List<ProductsDTO> searchedProdLstFromDAL = dalObj.ProdSearchList(input);
