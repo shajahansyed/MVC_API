@@ -1,1 +1,1 @@
-https://localhost:44304/api/Department/GetDeptDetails/Research
+https://localhost:44304/api/Department/GetAllProductDetails
