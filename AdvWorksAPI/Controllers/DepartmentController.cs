@@ -84,6 +84,23 @@ namespace AdvWorksAPI.Controllers
                 throw ex;
             }
         }
+        [HttpGet]
+        public HttpResponseMessage GetMinMaxProductDetails(int min,int max)
+        {
+            try
+            {
+                List<ProductsDTO> lstOfProd = blObj.FetchMinMaxProducts(min,max);
+                if (lstOfProd.Count > 0)
+                    return Request.CreateResponse(HttpStatusCode.OK, lstOfProd);
+                else
+                    return Request.CreateResponse(HttpStatusCode.OK, "No Dept Details");
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
         [HttpPost]
         public HttpResponseMessage AddNewDept(DeptDetailsDTO deptObj)     
         {

@@ -17,8 +17,9 @@ namespace AdvWorksAPI
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{action}/{deptGroupName}",
-                defaults: new { deptGroupName = RouteParameter.Optional }
+                routeTemplate: "api/{controller}/{action}/{min}/{max}",
+                new { min = RouteParameter.Optional,
+                      max = RouteParameter.Optional}
             );
             config.Formatters.Clear();
             config.Formatters.Add(new JsonMediaTypeFormatter());

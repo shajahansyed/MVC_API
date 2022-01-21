@@ -103,6 +103,36 @@ namespace AdvWorksDAL
             }
         }
 
+        public List<ProductsDTO> FetchMinMaxProdDetails(int min,int max)
+        {
+            try
+            {
+                //var lstProdListPrice = contextObj.Products.Where(w => w.ListPrice>min&&w.ListPrice<max).ToList();
+                var result = (from prod in contextObj.Products
+                              where prod.ListPrice > min && prod.ListPrice < max
+                              orderby prod.ListPrice ascending
+                              select prod).ToList();
+                List<Product> lstProductsFromDB = contextObj.Products.ToList();
+                List<ProductsDTO> lstProducts = new List<ProductsDTO>();
+                foreach (var prod in result)
+                {
+                    lstProducts.Add(new ProductsDTO()
+                    {
+                        ProdId = prod.ProductID,
+                        ProdName = prod.Name,
+                        ProdNum = prod.ProductNumber,
+                        ProdListPrice = prod.ListPrice,
+                    });
+                }
+                return lstProducts;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
         public int AddNewDeptUsingEF(DeptDetailsDTO newDeptObj)
         {
             try
