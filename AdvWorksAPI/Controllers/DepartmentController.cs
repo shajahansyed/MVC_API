@@ -119,5 +119,23 @@ namespace AdvWorksAPI.Controllers
                 return Request.CreateResponse(HttpStatusCode.OK, ex.Message);
             }
         }
+        [HttpPost]
+        public HttpResponseMessage AddNewProducts(ProductsDTO prodObj)
+        {
+            try
+            {
+                int newDeptId = 0;
+                int retValue = blObj.AddNewProduct(prodObj);
+                if (retValue == 1)
+                    return Request.CreateResponse(HttpStatusCode.OK, "Product data added sucessfully.");
+                else
+                    return Request.CreateResponse(HttpStatusCode.OK, "Product data not added/saved.");
+            }
+            catch (Exception ex)
+            {
+
+                return Request.CreateResponse(HttpStatusCode.OK, "Something went wrong....we will fix it soon.");
+            }
+        }
     }
 }

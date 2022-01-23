@@ -1,0 +1,6 @@
+https://localhost:44304/api/Department/AddNewProducts
+
+{
+    "ProdName" : "Adjustable Race 1",
+    "ProdNum" : "AR-5471"
+}

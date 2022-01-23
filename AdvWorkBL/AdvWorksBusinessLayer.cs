@@ -97,5 +97,10 @@ namespace AdvWorksBL
             List<ProductsDTO> prodLstFromDAL = dalObj.FetchMinMaxProdDetails(min,max);
             return prodLstFromDAL;
         }
+
+        public int AddNewProduct(ProductsDTO newProdObj)
+        {
+            return dalObj.AddNewProduct(newProdObj);
+        }
     }
 }

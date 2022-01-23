@@ -103,6 +103,34 @@ namespace AdvWorksDAL
             }
         }
 
+        public int AddNewProduct(ProductsDTO newProdObj)
+        {
+            try
+            {
+                Product prodObj = new Product();
+                prodObj.Name = newProdObj.ProdName;
+                prodObj.ProductNumber = newProdObj.ProdNum;
+                prodObj.MakeFlag = true;
+                prodObj.FinishedGoodsFlag = false;
+                prodObj.SafetyStockLevel = 1000;
+                prodObj.ReorderPoint = 750;
+                prodObj.StandardCost = 0.00m;
+                prodObj.ListPrice = 100.00m;
+                prodObj.DaysToManufacture = 5;
+                prodObj.SellStartDate = DateTime.Now;
+                prodObj.rowguid = Guid.NewGuid();
+                prodObj.ModifiedDate = System.DateTime.Now;
+
+                contextObj.Products.Add(prodObj);
+                return contextObj.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
         public List<ProductsDTO> FetchMinMaxProdDetails(int min,int max)
         {
             try
@@ -136,7 +164,7 @@ namespace AdvWorksDAL
         public int AddNewDeptUsingEF(DeptDetailsDTO newDeptObj)
         {
             try
-            {
+            {   
                 Department deptObj = new Department();
                 deptObj.Name = newDeptObj.DeptName;
                 deptObj.GroupName = newDeptObj.DeptGroupName;
