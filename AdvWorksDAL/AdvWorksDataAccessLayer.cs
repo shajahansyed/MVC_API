@@ -268,7 +268,7 @@ namespace AdvWorksDAL
                 //contextObj.Products.ToList();
                 //var lstProdListPrice = contextObj.Products.Where(w => w.ListPrice>100).OrderBy(o => o.ListPrice).ToList();
                 var result = (from prod in contextObj.Products
-                              where prod.ListPrice>100
+                              where prod.ListPrice>10
                               orderby prod.ListPrice ascending
                               select prod).ToList();
                 List<Product> lstProductsFromDB = contextObj.Products.ToList();

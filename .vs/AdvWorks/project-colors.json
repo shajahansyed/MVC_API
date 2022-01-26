@@ -35,7 +35,22 @@
       "ProjectGuid": "65bde7f2-6bc4-4b17-955a-9fc2b9f62be1",
       "DisplayName": "AdvWorksAPI",
       "ColorIndex": 5
+    },
+    "efefefc7-445a-4ea0-b43f-75ab07611d35": {
+      "ProjectGuid": "efefefc7-445a-4ea0-b43f-75ab07611d35",
+      "DisplayName": "AdvWorksAPITests",
+      "ColorIndex": 6
+    },
+    "a1b2f962-f74c-4626-b215-fedbd4f2800e": {
+      "ProjectGuid": "a1b2f962-f74c-4626-b215-fedbd4f2800e",
+      "DisplayName": "AdvWorksAPITests",
+      "ColorIndex": 7
+    },
+    "356b4358-2740-4610-a965-9e1b987f8464": {
+      "ProjectGuid": "356b4358-2740-4610-a965-9e1b987f8464",
+      "DisplayName": "AdvWorksPL",
+      "ColorIndex": 8
     }
   },
-  "NextColorIndex": 6
+  "NextColorIndex": 9
 }
