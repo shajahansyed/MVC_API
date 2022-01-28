@@ -183,7 +183,7 @@ namespace AdvWorksPL.Controllers
             try
             {
                 string baseURL = $"https://localhost:44304/";
-                string routeURL = $"api/AdvWorksAPI/GetAllDeptDetails/Research";
+                string routeURL = $"api/AdvWorksAPI/GetDeptDetails/Research";
                 var apiClient = new HttpClient();
                 apiClient.BaseAddress = new Uri(baseURL);
                 apiClient.DefaultRequestHeaders.Clear();

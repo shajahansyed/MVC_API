@@ -172,13 +172,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\AdvWorks\AddNewDept.cshtml" />
-    <Content Include="Views\AdvWorks\DisplayDeptDetails.cshtml" />
-    <Content Include="Views\AdvWorks\DisplayDeptDetailsWebAPI.cshtml" />
-    <Content Include="Views\AdvWorks\DisplayDeptGroupDetails.cshtml" />
-    <Content Include="Views\AdvWorks\DisplayDeptGroupDetailsWebAPI.cshtml" />
-    <Content Include="Views\AdvWorks\DisplayProdDetailsWebAPI.cshtml" />
-    <Content Include="Views\AdvWorks\DisplayProductDetails.cshtml" />
     <Content Include="Views\AdvWorksMVC\DisplayDeptGroupDetails.cshtml" />
     <Content Include="Views\AdvWorksMVC\DisplayDeptGroupDetailsWebAPI.cshtml" />
   </ItemGroup>

@@ -16,7 +16,7 @@ namespace AdvWorksPL
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{deptGroupName}",
-                defaults: new { controller = "AdvWorks", action = "DisplayProductDetails", deptGroupName = UrlParameter.Optional}
+                defaults: new { controller = "AdvWorksMVC", action = "DisplayDeptGroupDetailsWebAPI", deptGroupName = UrlParameter.Optional}
             );
         }
     }
