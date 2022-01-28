@@ -180,6 +180,7 @@
     <Content Include="Views\AdvWorksMVC\AddNewDept.cshtml" />
     <Content Include="Views\AdvWorksMVC\DisplayDeptDetailsWebAPI.cshtml" />
     <Content Include="Views\AdvWorksMVC\DisplayProdDetailsWebAPI.cshtml" />
+    <Content Include="Views\AdvWorksMVC\DisplayProdMinMaxDetailsWebAPI.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

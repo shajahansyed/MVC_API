@@ -236,5 +236,34 @@ namespace AdvWorksPL.Controllers
                 return View("Error");
             }
         }
+        public async Task<ActionResult> DisplayProdMinMaxDetailsWebAPI(int min,int max)
+        {
+            try
+            {
+                string baseURL = $"https://localhost:44304/";
+                string routeURL = $"api/AdvWorksAPI/GetMinMaxProductDetails/{min}/{max}";
+                var apiClient = new HttpClient();
+                apiClient.BaseAddress = new Uri(baseURL);
+                apiClient.DefaultRequestHeaders.Clear();
+                apiClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+                HttpResponseMessage apiResponse = await apiClient.GetAsync(routeURL);
+                if (apiResponse.IsSuccessStatusCode)
+                {
+                    var result = apiResponse.Content.ReadAsStringAsync().Result;
+                    List<ProductModel> lstProds = new List<ProductModel>();
+                    var finalResult = JsonConvert.DeserializeObject<List<ProductModel>>(result);
+                    return View(finalResult);
+                }
+                else
+                {
+                    return View("Error");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                return View("Error");
+            }
+        }
     }
 }
