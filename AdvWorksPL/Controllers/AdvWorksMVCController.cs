@@ -178,12 +178,12 @@ namespace AdvWorksPL.Controllers
                 return View("Error");
             }
         }
-        public async Task<ActionResult> DisplayDeptGroupDetailsWebAPI()
+        public async Task<ActionResult> DisplayDeptGroupDetailsWebAPI(string deptGroupName)
         {
             try
             {
                 string baseURL = $"https://localhost:44304/";
-                string routeURL = $"api/AdvWorksAPI/GetDeptDetails/Research";
+                string routeURL = $"api/AdvWorksAPI/GetDeptDetails/{deptGroupName}";
                 var apiClient = new HttpClient();
                 apiClient.BaseAddress = new Uri(baseURL);
                 apiClient.DefaultRequestHeaders.Clear();
