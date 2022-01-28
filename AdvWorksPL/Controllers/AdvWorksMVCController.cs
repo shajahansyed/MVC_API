@@ -163,7 +163,7 @@ namespace AdvWorksPL.Controllers
                 if (apiResponse.IsSuccessStatusCode)
                 {
                     var result = apiResponse.Content.ReadAsStringAsync().Result;
-                    List<DepartmentModel> lstDepts = new List<DepartmentModel>();
+                    //List<DepartmentModel> lstDepts = new List<DepartmentModel>();
                     var finalResult = JsonConvert.DeserializeObject<List<DepartmentModel>>(result);
                     return View(finalResult);
                 }
@@ -192,7 +192,6 @@ namespace AdvWorksPL.Controllers
                 if (apiResponse.IsSuccessStatusCode)
                 {
                     var result = apiResponse.Content.ReadAsStringAsync().Result;
-                    List<DepartmentModel> lstDepts = new List<DepartmentModel>();
                     var finalResult = JsonConvert.DeserializeObject<List<DepartmentModel>>(result);
                     return View(finalResult);
                 }
@@ -221,7 +220,6 @@ namespace AdvWorksPL.Controllers
                 if (apiResponse.IsSuccessStatusCode)
                 {
                     var result = apiResponse.Content.ReadAsStringAsync().Result;
-                    List<ProductModel> lstProds = new List<ProductModel>();
                     var finalResult = JsonConvert.DeserializeObject<List<ProductModel>>(result);
                     return View(finalResult);
                 }
@@ -250,7 +248,6 @@ namespace AdvWorksPL.Controllers
                 if (apiResponse.IsSuccessStatusCode)
                 {
                     var result = apiResponse.Content.ReadAsStringAsync().Result;
-                    List<ProductModel> lstProds = new List<ProductModel>();
                     var finalResult = JsonConvert.DeserializeObject<List<ProductModel>>(result);
                     return View(finalResult);
                 }

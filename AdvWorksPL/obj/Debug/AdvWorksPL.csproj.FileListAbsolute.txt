@@ -88,3 +88,5 @@ C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksPL\obj\Debug\AdvWork
 C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksPL\obj\Debug\AdvWorksPL.pdb
 C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksPL\bin\EntityFramework.SqlServer.dll
 C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksPL\bin\EntityFramework.SqlServer.xml
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksPL\bin\AdvWorksPL.dll.CodeAnalysisLog.xml
+C:\Users\shajs\Documents\Modules\ADOdotNET\AdvWorks\AdvWorksPL\bin\AdvWorksPL.dll.lastcodeanalysissucceeded

@@ -16,7 +16,7 @@ namespace AdvWorksPL
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{min}/{max}",
-                defaults: new { controller = "AdvWorksMVC", action = "DisplayProdMinMaxDetailsWebAPI", min = UrlParameter.Optional , max = UrlParameter.Optional}
+                defaults: new { controller = "AdvWorksMVC", action = "DisplayDeptDetailsWebAPI", min = UrlParameter.Optional , max = UrlParameter.Optional}
             );
         }
     }
