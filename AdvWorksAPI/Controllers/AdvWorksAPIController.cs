@@ -9,10 +9,10 @@ using System.Web.Http;
 
 namespace AdvWorksAPI.Controllers
 {
-    public class DepartmentController : ApiController
+    public class AdvWorksAPIController : ApiController
     {
         AdvWorksBusinessLayer blObj;
-        public DepartmentController()
+        public AdvWorksAPIController()
         {
             blObj = new AdvWorksBusinessLayer();
         }

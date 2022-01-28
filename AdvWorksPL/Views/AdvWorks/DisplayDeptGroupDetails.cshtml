@@ -1,24 +1,22 @@
-﻿@model IEnumerable<AdvWorksPL.Models.ProductModel>
+﻿@model IEnumerable<AdvWorksPL.Models.DepartmentModel>
 
 @{
-    ViewBag.Title = "DisplayProductDetails";
+    ViewBag.Title = "DisplayDeptGroupDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>DisplayProductDetails</h2>
+<h2>DisplayDeptGroupDetails</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
-    <tr>`
+    <tr>
         <th>
-            @Html.DisplayNameFor(model => model.ProdName)
+            @Html.DisplayNameFor(model => model.DeptName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ProdNum)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ProdListPrice)
+            @Html.DisplayNameFor(model => model.DeptGroupName)
         </th>
         <th></th>
     </tr>
@@ -26,13 +24,10 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.ProdName)
+            @Html.DisplayFor(modelItem => item.DeptName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ProdNum)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ProdListPrice)
+            @Html.DisplayFor(modelItem => item.DeptGroupName)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |

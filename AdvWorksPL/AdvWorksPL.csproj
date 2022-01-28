@@ -127,7 +127,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\DepartmentController.cs" />
+    <Compile Include="Controllers\AdvWorksController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -172,11 +172,12 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Department\DisplayDeptDetails.cshtml" />
-    <Content Include="Views\Department\DisplayProductDetails.cshtml" />
-    <Content Include="Views\Department\AddNewDept.cshtml" />
-    <Content Include="Views\Department\DisplayDeptGroupDetails.cshtml" />
-    <Content Include="Views\Department\DisplayProdDetails.cshtml" />
+    <Content Include="Views\AdvWorks\AddNewDept.cshtml" />
+    <Content Include="Views\AdvWorks\DisplayDeptDetails.cshtml" />
+    <Content Include="Views\AdvWorks\DisplayDeptDetailsWebAPI.cshtml" />
+    <Content Include="Views\AdvWorks\DisplayDeptGroupDetails.cshtml" />
+    <Content Include="Views\AdvWorks\DisplayDeptGroupDetailsWebAPI.cshtml" />
+    <Content Include="Views\AdvWorks\DisplayProdDetailsWebAPI.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
