@@ -12,10 +12,10 @@ using System.Web.Mvc;
 
 namespace AdvWorksPL.Controllers
 {
-    public class AdvWorksController : Controller
+    public class AdvWorksMVCController : Controller
     {
         AdvWorksBusinessLayer blObj;
-        public AdvWorksController()
+        public AdvWorksMVCController()
         {
             blObj = new AdvWorksBusinessLayer();
         }
@@ -183,7 +183,7 @@ namespace AdvWorksPL.Controllers
             try
             {
                 string baseURL = $"https://localhost:44304/";
-                string routeURL = $"api/AdvWorksAPI/GetAllDeptDetails/Reasearch";
+                string routeURL = $"api/AdvWorksAPI/GetAllDeptDetails/Research";
                 var apiClient = new HttpClient();
                 apiClient.BaseAddress = new Uri(baseURL);
                 apiClient.DefaultRequestHeaders.Clear();
